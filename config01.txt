@@ -1,0 +1,61 @@
+{
+  "config.version" : "2.0",
+  "config.project.from.csv" : "false",
+  "config.encoding" : "UTF-8",
+  "config.file.id" : "4448d1a8-2d2a-4096-900b-52787cc7df8d",
+  "config.email.suffix" : "@",
+  "config.file.name" : "jiracsv.csv",
+  "config.field.mappings" : {
+    "Responsável" : {
+      "jira.field" : "assignee",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "Tipo de item" : {
+      "jira.field" : "issuetype",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "Descrição" : {
+      "jira.field" : "description",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "Resumo" : {
+      "jira.field" : "summary",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "Relator" : {
+      "jira.field" : "reporter",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "Prioridade" : {
+      "jira.field" : "priority",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    },
+    "ID principal" : {
+      "jira.field" : "subtask-parent-id",
+      "userChanged" : "false",
+      "manualMapping" : "true"
+    }
+  },
+  "config.csv.file.id" : null,
+  "config.value.mappings" : {
+    "Resumo" : {
+      "Teste 13" : "Teste 13"
+    }
+  },
+  "config.delimiter" : ",",
+  "config.project" : {
+    "project.type" : null,
+    "project.key" : "SUP",
+    "project.description" : null,
+    "project.url" : null,
+    "project.name" : "Suporte",
+    "project.lead" : "ug:385c30ab-5485-437f-b8a0-3d4bc018cf30"
+  },
+  "config.date.format" : "dd/MMM/yy h:mm a"
+}
