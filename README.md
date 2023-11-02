@@ -8,6 +8,9 @@ Programa que Automatiza o Jira para Criar Cards Filhos com BDD
   o seu projeto. ex: [config01.txt](config01.txt)
 - Ter um motor para manipulação do browser como o GeekoDriver ou ChromeDiver
 
+# Imagens
+## Tela Principal
+  <img src="../imagens/telainicial.png" />
 # Observações
 Este projeto foi desenvolvido no NetBeans utilizando Mavem e Selenium  
   
