@@ -6,6 +6,7 @@
 package br.com.pageobject;
 
 import java.util.concurrent.TimeUnit;
+import static javax.swing.Spring.width;
 import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -14,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -34,22 +36,27 @@ public class PageObject {
 
 //        WebDriver driver = new ChromeDriver(options);
         WebDriver driver = new FirefoxDriver();
+        
         String urljira = "https://id.atlassian.com/login";
-        String user = "erodrigues.santos@gmail.com";
-        String pass = "Hastemale02";
-        driver.get(urljira);
+        Point point = new Point(-1000,0);
+        driver.manage().window().setPosition(point);
         driver.manage().window().maximize();
         Actions act = new Actions(driver);
-        
+        Thread.sleep(8000);
+        String user = 
+        String pass = 
+        driver.get(urljira);
+               
         // manupulando o login
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(user);
         driver.findElement(By.xpath("//button[@id='login-submit']")).click();
 
         //driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(26, TimeUnit.SECONDS);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(pass);
         driver.findElement(By.xpath("//button[@id='login-submit']")).click();
         Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//input[@data-test-id='search-dialog-input']")).click();
         //driver.findElement(By.xpath("//input[@data-test-id='search-dialog-input']")).sendKeys(idpai);
         //act.sendKeys(Keys.RETURN).build().perform();
@@ -61,6 +68,9 @@ public class PageObject {
         busca.sendKeys(idpai);
         Thread.sleep(4000);
         act.sendKeys(Keys.TAB).build().perform();
+        act.sendKeys(Keys.TAB).build().perform();
+        act.sendKeys(Keys.ARROW_RIGHT).build().perform();
+        
         Thread.sleep(4000);
         //act.sendKeys(Keys.TAB).build().perform();
         act.sendKeys(Keys.ENTER).build().perform();
@@ -70,8 +80,7 @@ public class PageObject {
         //Clic Botão [Criar]
         Thread.sleep(8000);
         driver.findElement(By.xpath("//button[@id='createGlobalItem']")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//body[@id='jira']//input[@id='summary-field']")).sendKeys("");
+        //driver.findElement(By.xpath("//body[@id='jira']//input[@id='summary-field']")).sendKeys("");
         driver.findElement(By.xpath("//body[@id='jira']//span[contains(text(),'Importar itens')]")).click();
         
         WebElement choseFile = driver.findElement(By.id("csvFile"));
@@ -80,8 +89,9 @@ public class PageObject {
         driver.findElement(By.id("useConfigFile")).click();
         
         WebElement choseConfig = driver.findElement(By.id("configFile"));
-        choseConfig.sendKeys(System.getProperty("user.dir")+"\\config01.txt");
-        Thread.sleep(5000);
+        Thread.sleep(8000);
+        choseConfig.sendKeys(System.getProperty("user.dir")+"\\config02.txt");
+        Thread.sleep(8000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scrollBy(0,350)", "");
         driver.findElement(By.id("nextButton")).click();
