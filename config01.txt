@@ -37,8 +37,8 @@
       "manualMapping" : "true"
     },
     "ID principal" : {
-      "jira.field" : "subtask-parent-id",
-      "userChanged" : "false",
+      "jira.field" : "parent",
+      "userChanged" : "true",
       "manualMapping" : "true"
     }
   },
