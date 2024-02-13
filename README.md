@@ -5,7 +5,7 @@ Programa que Automatiza o Jira para Criar Cards Filhos com BDD
 ⏳:O objetivo é criar CARDs filho no Jira contendo em sua descrição a estrutura de texto BDD, obedecendo os requisitos:
 - Ter um arquivo de importação 
 - Deve ter um CARD Pai devidamente criado no mesmo projeto para o jira no formato ***.txt** e devidamente configurado para
-  o seu projeto. ex: [config01.txt](config01.txt)
+  o seu projeto. ex: [config01.txt](config02.txt)
 - Ter um motor para manipulação do browser como o GeekoDriver ou ChromeDiver
 
 # Imagens
